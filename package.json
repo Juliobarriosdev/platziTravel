@@ -7,6 +7,8 @@
     "tw:build": "tailwindcss -i ./src/css/input.css -o ./dist/styles/output.css",
     "tw:dev": "tailwindcss -i ./src/css/input.css -o ./src/styles/output.css --watch",
     "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "npx gh-pages -d build",
     "start": "webpack-dev-server --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
