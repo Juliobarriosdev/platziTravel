@@ -4,7 +4,7 @@ const stylesHandler = 'style-loader'
 const CopyPlugin = require("copy-webpack-plugin")
 
 module.exports = {
-  entry: './public/index.js',
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'bundle.js',
@@ -17,9 +17,8 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [
-        { from: "./public/css", to: "./css" },
-        { from: "./public/img", to: "./img" },
-        { from: "./public/svg", to: "./svg" },
+        { from: "./src/styles", to: "./styles" },
+        { from: "./src/assets/img", to: "./img" },
       ]
     })
   ],
